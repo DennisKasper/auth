@@ -167,7 +167,9 @@ Expected output
 ## Todo
 
 - [ ] Option PostgreSQL database
+- [ ] Login with GitHub
 - [ ] Frontend
 - [ ] Production setup
 - [ ] Admin-Panel
 - [ ] Unit testing
+- [ ] Dockerize
