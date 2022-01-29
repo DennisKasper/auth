@@ -1,4 +1,3 @@
-from __future__ import annotations
 import asyncio
 import datetime
 from functools import wraps
@@ -83,7 +82,7 @@ async def index() -> str:
 
 @app.route('/auth/register', methods=['POST'])
 @validate_request(User)
-async def register(data: User) -> dict(tuple[str, bool], tuple[str, str]):
+async def register(data: User) -> dict[tuple[str, bool], tuple[str, str]]:
     hashed_pwd = bcrypt.hashpw(data.password.encode('utf-8'), bcrypt.gensalt(GENSALT))
 
     user_id = await app.db.fetch_val(
